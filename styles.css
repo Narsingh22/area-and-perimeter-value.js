@@ -1,0 +1,30 @@
+/* #figures {
+    display: flex;
+    justify-content: space-around;
+}
+
+#square {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+#circle {
+    border: 1px solid black;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+
+form {
+    display: grid;
+    margin: 1em;
+}
+
+form input {
+    border: 0;
+}
+
+button {
+    width: 100px;
+} */

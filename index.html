@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div id="figures">
+        <div>
+            <div id="square"></div>
+
+            <form id="form">
+                <label for="value"><b>Length and breadth of the square :</b>
+                    <input id="length" name="value">
+                </label>
+
+                <button id="get_result">Show Result</button>
+            </form>
+
+            <p id="output"></p>
+        </div>
+        
+    </div>
+
+</body>
+
+<script>
+
+    var input_elem = document.getElementById("length");
+    console.log(input_elem);
+    console.log(typeof input_elem);
+
+    var button_elem = document.getElementById("get_result");
+    console.log(button_elem);
+    console.log(typeof button_elem);
+
+    var output_elem = document.getElementById("output");
+    console.log(output_elem);
+    console.log(typeof output_elem);
+    
+    button_elem.addEventListener("click", calculate_area_and_perimeter);
+
+    function calculate_area_and_perimeter() {
+
+        let square_length = input_elem.value;
+        let circle_radius = square_length;
+
+        let square_perimeter = square_length * 4;
+        let square_area = square_length * square_length;
+
+        let circle_perimeter = square_length * 6.28;
+        let circle_area = square_length * square_length * 3.14;  
+        let result_string = `Area of Square : ${square_area}<br>
+                             Perimeter of Square : ${square_perimeter}<br>
+                             Area of Circle : ${circle_area}<br>
+                             Perimeter of Circle : ${circle_perimeter}`;
+
+        output_elem.innerHTML = result_string;
+    }
+
+
+</script>
+
+</html>
